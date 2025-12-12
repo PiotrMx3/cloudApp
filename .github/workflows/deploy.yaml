@@ -5,13 +5,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 
-  set-node-test:
-    steps:
       - uses: actions/setup-node@v6
+        with:
+        node-version: "24"
+
       - run: npm ci
       - run: npm test
