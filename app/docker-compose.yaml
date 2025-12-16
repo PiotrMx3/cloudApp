@@ -1,0 +1,11 @@
+services:
+  slotapp:
+    image: ghcr.io/piotrmx3/cloudapp:latest
+    container_name: slotapp
+    restart: always
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true
