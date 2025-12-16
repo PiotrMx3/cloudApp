@@ -68,7 +68,9 @@ jobs:
     # 3: SSH
   ssh-remote:
     name: SSH-Remote
+    needs: build-push-docker
     runs-on: ubuntu-latest
+
     steps:
       - name: Multiple commands
         uses: appleboy/ssh-action@v1
