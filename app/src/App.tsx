@@ -4,7 +4,7 @@ import SlotMachine from "./components/Slotmachine/Slotmachine";
 function App() {
   return (
     <>
-      <h1>Try your luck !</h1>
+      <h1>Try your luck !!!</h1>
 
       <SlotMachine slots={3} />
       <SlotMachine slots={5} />
