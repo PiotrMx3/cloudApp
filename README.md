@@ -37,3 +37,12 @@ The `scripts/deploy.sh` script performs the deployment steps on the server:
 - Cleans up unused/dangling images (`docker image prune -f`).
 
 This ensures the server always runs the latest container image from GHCR after a successful build.
+
+### Required Secrets
+
+The following GitHub Actions secrets are required for the deployment job:
+
+- **HOST** – IP address or hostname of the remote server
+- **USERNAME** – SSH user used to connect to the server
+- **KEY** – private SSH key used for authentication
+- **PORT** – SSH port of the remote server (e.g. `22`)
